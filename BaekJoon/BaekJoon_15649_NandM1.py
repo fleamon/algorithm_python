@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8
 
+# https://www.acmicpc.net/problem/15649
+
 import itertools
 
 N, M = map(int, raw_input().split())

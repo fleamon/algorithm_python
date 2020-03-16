@@ -56,3 +56,64 @@ def solution(numbers):
  
     return sum(prime_list)
 """
+
+
+
+
+
+
+
+
+"""
+수동
+
+def solution(numbers):
+    arr = []
+    tmp = []
+    for i in numbers:
+        arr.append(i)
+    visited = [False] * len(arr)
+    num = []
+    for i in range(1, len(arr) + 1):
+        create(i, arr, 0, tmp, visited, num)
+
+    num = list(set(num))
+    m = max(num)
+    # print confirm(num, m)
+    return confirm(num, m)
+
+
+def create(x, ar, depth, tmp, visited, num):
+    if depth == x:
+        x = ''.join(tmp)
+        x = int(x)
+        num.append(x)
+        return
+
+    for i in range(len(ar)):
+        if not visited[i]:
+            visited[i] = True
+            tmp.append(ar[i])
+            create(x, ar, depth+1, tmp, visited, num)
+            visited[i] = False
+            tmp.pop()
+
+
+def confirm(array, n):
+    list = [False, False] + [True] * (n - 1)
+    index = []
+    count = 0
+    for i in range(2, n+1):
+        if list[i]:
+            index.append(i)
+            for j in range(2*i, n+1, i):
+                list[j] = False
+
+    for i in array:
+        for j in index:
+            if i == j:
+                count=count+1
+                break
+
+    return count
+"""

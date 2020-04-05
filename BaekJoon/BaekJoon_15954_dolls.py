@@ -22,6 +22,7 @@ while (K != (N + 1)):
     K += 1
 sys.stdout.write(str(min_std))
 
+
 """
 N, K = map(int, raw_input().split())
 personNO = list(map(int, raw_input().split()))

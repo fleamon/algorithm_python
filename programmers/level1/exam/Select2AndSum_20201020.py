@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- encoding: utf-8
 
 # https://programmers.co.kr/learn/courses/30/lessons/68644?language=python3

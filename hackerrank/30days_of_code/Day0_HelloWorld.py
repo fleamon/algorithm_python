@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- encoding: utf-8
 
 # Read a full line of input from stdin and save it to our dynamically typed variable, input_string.
